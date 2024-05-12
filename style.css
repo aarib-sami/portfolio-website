@@ -9,6 +9,15 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #041C32;
+}
+
+div, .nav-links-text{
+    color: #ECB365;
+}
+
+.name{
+    color:#46C2CB
 }
 
 html {
@@ -16,7 +25,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: #ECB365;
 }
 
 /* TRANSITION */
@@ -178,7 +187,7 @@ section {
 
 .section__text {
   align-self: center;
-  text-align: center;
+  text-align: left;
 }
 
 .section__text p {
@@ -197,6 +206,14 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  color: #46C2CB
+}
+
+div .details-container{
+    background-color:#064663;
+    border-color: black;
+    border-radius: 4rem;
+    border-width: thin;
 }
 
 #socials-container {
@@ -353,80 +370,80 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS */
+/* PROJECTS SECTION */
 
-#projects{
-    position: relative;
+#projects {
+  position: relative;
 }
 
-.color-container{
-    border-color: 163,163,163;
-    background: 250, 250, 250;
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
 }
 
-.project-img{
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
 }
 
-.project-title{
-    margin: black;
-    color: black;
+.project-title {
+  margin: 1rem;
+  color: black;
 }
 
-.project-btn{
-    margin: black;
-    border-color: 163,163,163;
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
 }
 
 /* CONTACT */
 
-#contacts {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
-  }
-  
-  .contact-info-upper-container {
-    display: flex;
-    justify-content: center;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    background: (250, 250, 250);
-    margin: 2rem auto;
-    padding: 0.5rem;
-  }
-  
-  .contact-info-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem;
-  }
-  
-  .contact-info-container p {
-    font-size: larger;
-  }
-  
-  .contact-icon {
-    cursor: default;
-  }
-  
-  .email-icon {
-    height: 2.5rem;
-  }
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
 
 /* FOOTER SECTION */
 
-footer{
-    height: 26vh;
-    margin: 0 1rem;
+footer {
+  height: 26vh;
+  margin: 0 1rem;
 }
 
-footer p{
-    text-align: center;
+footer p {
+  text-align: center;
 }
