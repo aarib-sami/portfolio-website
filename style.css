@@ -9,15 +9,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #041C32;
-}
-
-div, .nav-links-text{
-    color: #ECB365;
-}
-
-.name{
-    color:#46C2CB
 }
 
 html {
@@ -25,7 +16,7 @@ html {
 }
 
 p {
-  color: #ECB365;
+  color: rgb(85, 85, 85);
 }
 
 /* TRANSITION */
@@ -187,7 +178,7 @@ section {
 
 .section__text {
   align-self: center;
-  text-align: left;
+  text-align: center;
 }
 
 .section__text p {
@@ -206,14 +197,6 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
-  color: #46C2CB
-}
-
-div .details-container{
-    background-color:#064663;
-    border-color: black;
-    border-radius: 4rem;
-    border-width: thin;
 }
 
 #socials-container {
@@ -311,10 +294,10 @@ div .details-container{
 }
 
 .details-container {
-  padding: 1.5rem;
   flex: 1;
+  padding: 1.5rem;
   background: white;
-  border-radius: 2rem;
+  border-radius: 3rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
@@ -380,6 +363,7 @@ article .icon {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
 }
+
 
 .project-img {
   border-radius: 2rem;
