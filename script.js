@@ -6,7 +6,7 @@ function toggleMenu()
     icon.classList.toggle("open");
 }
 
-function openModal(videoUrl) {
+ function openModal(videoUrl) {
     var modal = document.getElementById("videoModal");
     var video = document.getElementById("demoVideo");
     var source = document.getElementById("videoSource");
@@ -20,9 +20,12 @@ function openModal(videoUrl) {
   function closeModal() {
     var modal = document.getElementById("videoModal");
     var video = document.getElementById("demoVideo");
-    
+  
     modal.style.display = "none";
     video.pause();
+  
+    // Prevent default behavior of the click event
+    event.preventDefault();
   }
 
   // Close modal when clicking outside of the modal content
