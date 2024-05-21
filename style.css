@@ -202,6 +202,7 @@ section {
   font-size: 3rem;
   text-align: center;
   color: #4985f4;
+  margin-bottom: 2rem;
 }
 
 #socials-container {
@@ -261,7 +262,6 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  
 }
 
 .about-details-container {
@@ -286,6 +286,7 @@ section {
 
 .details-container {
   flex: 1;
+  width: 250px;
   padding: 1.5rem;
   background: white;
   border-radius: 3rem;
@@ -294,13 +295,14 @@ section {
   text-align: center;
 }
 
-.details-container, .details-container{
-  background-color: #9452ff;
+.details-container{
+  background-color: #ffffff;
 }
 
 .section-container {
   gap: 4rem;
-  height: 80%;
+  height: 50%;
+  
 }
 
 .section__pic-container {
@@ -352,6 +354,7 @@ article .icon {
 
 #projects {
   position: relative;
+  margin-bottom: 25rem;
 }
 
 .color-container {
@@ -362,11 +365,18 @@ article .icon {
   background-color: rgba(0, 0, 0, 0.2); /* Adjust the alpha value for desired darkness */
 }
 
+.project-containers{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 275px; 
+  height: 300px; 
+  object-fit: cover;
+  object-position: 25% 25%; 
 }
 
 .project-title {
@@ -383,6 +393,7 @@ article .icon {
 /* CONTACT */
 
 #contact {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
