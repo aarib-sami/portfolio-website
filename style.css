@@ -253,7 +253,6 @@ section {
   cursor: pointer;
 }
 
-
 .btn-container {
   gap: 1rem;
 }
@@ -395,7 +394,7 @@ article .icon {
 .project-btn {
   color: #021619;
   border-color: #021619;
-  border: black 0.1rem solid;
+  border: black 0.085rem solid;
   font-weight: 700;
   transition: all 300ms ease;
   padding: 1rem;
