@@ -37,6 +37,11 @@
   .section-container {
     display: block;
   }
+
+  #profile{
+    margin-bottom: 29%;
+  }
+
   .arrow {
     display: none;
   }
@@ -51,7 +56,7 @@
     width: auto;
     height: 46vw;
     justify-content: center;
-    padding-bottom: 2rem;
+    padding-bottom: 5%;
   }
  
 }
@@ -63,7 +68,7 @@
   }
   #profile {
     height: 83vh;
-    margin-bottom: 0;
+    margin-bottom: 5%;
   }
   article {
     font-size: 1rem;
