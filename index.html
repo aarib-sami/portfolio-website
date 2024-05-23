@@ -115,12 +115,6 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
@@ -315,12 +309,6 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
@@ -344,8 +332,8 @@
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="'./assets/contact-list-organizer.mp4'"
               >
                 Live Demo
               </button>
@@ -364,11 +352,16 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/aarib-sami/zoo-animal-classifier-using-ML'"
               >
                 Github
               </button>
-              <button class="btn btn-color-2 project-btn">Live Demo</button>
+              <button
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="./assets/Zoo-Animal-Classifier.mp4"
+              >
+                Live Demo
+              </button>
               <button class="btn btn-color-2 project-btn" >Details</button>
             </div>
           </div>
@@ -384,11 +377,16 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/aarib-sami/carBase'"
               >
                 Github
               </button>
-              <button class="btn btn-color-2 project-btn">Live Demo</button>
+              <button
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="./assets/CarBase.mp4"
+              >
+                Live Demo
+              </button>
               <button class="btn btn-color-2 project-btn" >Details</button>
             </div>
           </div>
@@ -404,13 +402,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/aarib-sami/alpine-escape'"
               >
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="./assets/Alpine-Escape.mp4"
               >
                 Live Demo
               </button>
@@ -429,13 +427,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/aarib-sami/humanitarian-aid-service'"
               >
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="./assets/Humanitarian Aid Service.mp4"
               >
                 Live Demo
               </button>
@@ -454,13 +452,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/aarib-sami/lazer-defender'"
               >
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="./assets/Lazer Defender.mp4"
               >
                 Live Demo
               </button>
@@ -479,13 +477,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/aarib-sami/glitch-garden'"
               >
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="./assets/Glitch Garden.mp4"
               >
                 Live Demo
               </button>
@@ -504,13 +502,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/aarib-sami/catch-the-icicle'"
               >
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="./assets/Catch The Icicle.mp4"
               >
                 Live Demo
               </button>
@@ -519,12 +517,6 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
@@ -562,5 +554,14 @@
       <p>Copyright &#169; 2024 Aarib Sami. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <video id="videoPlayer" controls>
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+  </div>
   </body>
 </html>
