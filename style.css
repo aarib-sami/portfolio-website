@@ -203,7 +203,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
-  color: #4985f4;
+  color: #063b9e;
 }
 
 #socials-container {
@@ -239,7 +239,6 @@ section {
 .btn-color-2 {
   border: black 0.1rem solid;
   background: #063b9e; 
-  color: white;
 }
 
 .btn-color-1{
@@ -392,7 +391,7 @@ article .icon {
 }
 
 .project-btn {
-  color: #021619;
+  color: #ffffff;
   border-color: #021619;
   border: black 0.085rem solid;
   font-weight: 700;
