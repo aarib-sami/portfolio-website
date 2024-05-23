@@ -1,47 +1,54 @@
-function toggleMenu()
-{
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-}
-
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Get the modal
-    var modal = document.getElementById("videoModal");
+  // Video modal functionality
+  var videoModal = document.getElementById("videoModal");
+  var videoPlayer = document.getElementById("videoPlayer");
+  var videoClose = document.getElementsByClassName("close")[0];
+  var videoButtons = document.getElementsByClassName("open-modal");
 
-    // Get the <video> element that will contain the video
-    var videoPlayer = document.getElementById("videoPlayer");
+  for (var i = 0; i < videoButtons.length; i++) {
+    videoButtons[i].addEventListener('click', function() {
+      var videoUrl = this.getAttribute('data-video');
+      videoPlayer.querySelector('source').src = videoUrl;
+      videoPlayer.load();
+      videoModal.style.display = "block";
+      videoPlayer.muted = true;
+      videoPlayer.play();
+    });
+  }
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+  videoClose.onclick = function() {
+    videoModal.style.display = "none";
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+  }
 
-    // Get all buttons that open the modal
-    var buttons = document.getElementsByClassName("open-modal");
+  // Text modal functionality
+  var textModal = document.getElementById("textModal");
+  var textContent = document.getElementById("textContent");
+  var textClose = document.getElementsByClassName("text-close")[0];
+  var textButtons = document.querySelectorAll('.project-btn');
 
-    // Loop through the buttons to add click event listeners
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function() {
-            var videoUrl = this.getAttribute('data-video');
-            videoPlayer.querySelector('source').src = videoUrl;
-            videoPlayer.load();  // Reload the video element
-            modal.style.display = "block";
-        });
+  textButtons.forEach(button => {
+    if (button.innerText === 'Details') {
+      button.addEventListener('click', function() {
+        var text = this.getAttribute('data-text');
+        textContent.innerText = text;
+        textModal.style.display = "block";
+      });
     }
+  });
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-        videoPlayer.pause();  // Pause the video when closing
-        videoPlayer.currentTime = 0;  // Reset the video time
-    }
+  textClose.onclick = function() {
+    textModal.style.display = "none";
+  }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            videoPlayer.pause();  // Pause the video when closing
-            videoPlayer.currentTime = 0;  // Reset the video time
-        }
+  window.onclick = function(event) {
+    if (event.target == videoModal) {
+      videoModal.style.display = "none";
+      videoPlayer.pause();
+      videoPlayer.currentTime = 0;
+    } else if (event.target == textModal) {
+      textModal.style.display = "none";
     }
+  }
 });
