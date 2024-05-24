@@ -345,6 +345,7 @@ section {
 
 .article-container img{
   padding-bottom: 1.5rem;
+
 }
 
 article {
@@ -379,7 +380,7 @@ article .icon {
 
 
 .project-img {
-  border-radius: 2rem;
+  border-radius: 3rem;
   width: 275px; 
   height: 300px; 
   object-fit: cover;
