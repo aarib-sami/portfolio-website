@@ -23,6 +23,12 @@
   html, body {
     overflow-x: hidden;
   }
+
+  nav.black{
+    background: #272727;
+    background-color: #000000;
+    z-index: 2;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -31,6 +37,12 @@
   }
   #hamburger-nav {
     display: flex;
+    position: sticky; top: 0;
+  }
+  nav.black{
+    background: #272727;
+    background-color: #000000;
+    z-index: 2;
   }
 
   #profile,
@@ -77,6 +89,13 @@
     height: fit-content;
     margin-bottom: 2rem;
   }
+
+  nav.black{
+    background: #272727;
+    background-color: #000000;
+    z-index: 2;
+  }
+
   .about-containers,
   .contact-info-upper-container,
   .btn-container {

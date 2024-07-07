@@ -616,5 +616,17 @@
       <div id="textContent"></div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"> </script>
+  <script>
+    $(window).scroll(function(){
+      if($(window).scrollTop()){
+        $("nav").addClass("black");
+      }
+      else{
+        $("nav").removeClass("black");
+      }
+    });
+  </script>
+  
   </body>
 </html>
