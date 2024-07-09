@@ -89,7 +89,7 @@
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
-                class="icon"
+                class="mini-icon"
               />
               <h3>Bachelor's In Computer Science</h3>
               <p>University of Guelph</p>
@@ -98,7 +98,7 @@
               <img
                 src="./assets/education.png"
                 alt="Education icon"
-                class="icon"
+                class="mini-icon"
               />
               <h3>Minor In Project Management</h3>
               <p>University of Guelph</p>
@@ -317,6 +317,37 @@
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers project-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/AI-FaceID-Attendance-System.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">AI FaceID Attendance System</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/aarib-sami/AI-FaceID-Attendance-System','_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn open-modal"
+                data-video="./assets/AI-FaceID-Attendance-System.mp4"
+              >
+                Video Demo
+              </button>
+              <button class="btn btn-color-2 project-btn details" 
+              data-text="• Developed an AI-powered face recognition attendance system using Python and OpenCV
+              • Implemented automated attendance logging by detecting faces and updating database with each recognized student
+              • Integrated with Firebase for real-time database management and cloud storage of student data and attendance records 
+              • Designed an interface displaying real-time student information such as name, major, year, total attendance and ID"
+              >Details
+              </button>
+            </div>
+          </div>
           <div class="details-container color-container">
             <div class="article-container">
               <img
@@ -588,16 +619,6 @@
       </div>
     </section>
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
       <p>Copyright &#169; 2024 Aarib Sami.</p>
     </footer>
     <script src="script.js"></script>

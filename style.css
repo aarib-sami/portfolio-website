@@ -34,11 +34,15 @@ nav,
   display: flex;
 }
 
+#desktop-nav{
+  position: fixed;
+  width: 100%;
+}
+
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 10vh;
-  position: sticky; top: 0;
+  height: 14vh;
 }
 
 .nav-links {
@@ -158,7 +162,7 @@ nav.black{
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  padding-top: 25vh;
   height: 96vh;
   margin: 0 10rem;
   margin-bottom: 6rem;
@@ -224,6 +228,11 @@ section {
 
 .icon {
   cursor: pointer;
+  height: 2rem;
+}
+
+.mini-icon{
+  pointer-events: none;
   height: 2rem;
 }
 
