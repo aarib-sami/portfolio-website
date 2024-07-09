@@ -37,6 +37,7 @@
   }
   #hamburger-nav {
     display: flex;
+    position: sticky; top: 0;
   }
   nav.black{
     background: #272727;
