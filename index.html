@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <div id = "particles-js"></div>
     <nav id="desktop-nav">
       <div class="logo"><a href="">Aarib Sami</a></div>
       <div>
@@ -642,16 +643,16 @@
     $(window).scroll(function(){
       if($(window).scrollTop()){
         $("nav").addClass("black");
+        $('#particles-js').addClass('hidden');
       }
       else{
         $("nav").removeClass("black");
+        $('#particles-js').removeClass('hidden');
+        
       }
     });
   </script>
-  <div id = "particles-js"></div>
   <script type="text/javascript" src="particles.js"></script>
   <script type="text/javascript" src="app.js"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   </body>
 </html>
