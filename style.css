@@ -75,7 +75,8 @@ a:hover {
 
 nav.black{
   background: #272727;
-  background-color: #000000;
+  background-color: #000000f6;
+  z-index: 2;
 }
 
 /* HAMBURGER MENU */
