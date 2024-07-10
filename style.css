@@ -162,7 +162,7 @@ nav.black{
 
 /* SECTIONS */
 
-section:not(#contact) {
+section {
   padding-top: 25vh;
   height: 96vh;
   margin: 0 10rem;
