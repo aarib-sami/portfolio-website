@@ -162,7 +162,7 @@ nav.black{
 
 /* SECTIONS */
 
-section {
+section:not(#contact) {
   padding-top: 25vh;
   height: 96vh;
   margin: 0 10rem;
@@ -428,6 +428,13 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding-top: 5vh;
+  height: 96vh;
+  margin: 0 10rem;
+  margin-bottom: 6rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+  height: fit-content;
 }
 
 .contact-info-upper-container {
@@ -464,7 +471,7 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
+  height: 10.1vh;
   margin: 0 1rem;
 }
 
