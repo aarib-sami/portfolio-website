@@ -430,7 +430,6 @@ article .icon {
   flex-direction: column;
   padding-top: 5vh;
   height: 96vh;
-  margin: 0 10rem;
   margin-bottom: 6rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -444,7 +443,7 @@ article .icon {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   background: (250, 250, 250);
-  margin: 2rem auto;
+  margin: 5rem auto;
   padding: 1rem;
 }
 
