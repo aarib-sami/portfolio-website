@@ -5,54 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aarib's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="/assets/Pictures/profile-pic.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/Pictures/profile-pic.png"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8F85QX330"></script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-K8F85QX330"
+  ></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag('config', 'G-K8F85QX330');
+    gtag("config", "G-K8F85QX330");
   </script>
   <body>
-    <div id = "particles-js"></div>
-    <nav id="desktop-nav">
-      <div class="logo"><a href="">Aarib Sami</a></div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+    <div id="particles-js"></div>
+    <!-- Creative Floating Side Navigation -->
+    <nav id="side-nav" class="side-nav">
+      <ul class="side-nav-links">
+        <li>
+          <a href="#profile" class="nav-dot" data-section="profile">
+            <span class="nav-label">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="nav-dot" data-section="about">
+            <span class="nav-label">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="#experience" class="nav-dot" data-section="experience">
+            <span class="nav-label">Experience</span>
+          </a>
+        </li>
+        <li>
+          <a href="#projects" class="nav-dot" data-section="projects">
+            <span class="nav-label">Projects</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-dot" data-section="contact">
+            <span class="nav-label">Contact</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Aarib Sami</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
+    <section id="profile" class="fade-in">
       <div class="section__pic-container">
-        <img src="./assets/Pictures/profile-pic.png" alt="Aarib Sami profile picture" />
+        <img
+          src="./assets/Pictures/profile-pic.png"
+          alt="Aarib Sami profile picture"
+        />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Aarib Sami</h1>
         <p class="section__text__p2">Full Stack Developer</p>
         <div class="btn-container">
@@ -70,8 +84,8 @@
           <img
             src="./assets/Logos/linkedin.png"
             alt="My LinkedIn profile"
-            class="icon" 
-            target=”_blank”
+            class="icon"
+            target="”_blank”"
             onclick="window.open('https://www.linkedin.com/in/aarib-sami/','_blank')"
           />
           <img
@@ -83,573 +97,510 @@
         </div>
       </div>
     </section>
-    <section id="about">
+    <section id="about" class="fade-in">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/Pictures/about-pic.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
+      <div class="about-details-container">
+        <div class="text-container">
+          <p class="info">
+            I'm Aarib Sami, a Computer Science student at the University of
+            Guelph. I build full stack applications and I'm passionate about AI
+            and machine learning.
+          </p>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/Logos/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Bachelor's In Computer Science</h3>
-              <p>University of Guelph</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/Logos/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Minor In Project Management</h3>
-              <p>University of Guelph</p>
+        <div class="education-section">
+          <div class="education-item">
+            <div class="education-header">
+              <div class="education-logo-container">
+                <img
+                  src="./assets/Logos/guelph-logo.png"
+                  alt="University of Guelph Logo"
+                  class="education-logo"
+                  onerror="handleLogoError(this)"
+                />
+              </div>
+              <div class="education-info">
+                <h3 class="education-title">
+                  Bachelor of Computing in Computer Science
+                </h3>
+                <p class="education-school">
+                  University of Guelph — Guelph, ON
+                </p>
+                <p class="education-year">2028</p>
+                <p class="education-details">GPA: 3.94/4.00, Dean's List</p>
+              </div>
             </div>
           </div>
-          <div class="text-container">
-            <p class="info">
-              I'm Aarib Sami, currently studying Computer Science at the University of Guelph, 
-              where I'm also pursuing a minor in Project Management. With a strong foundation in 
-              Python, C, Java and C#, I've gained programming skills through hands-on involvement 
-              in various projects. Beyond coding, I bring a creative flair to the table, possessing
-              an interest for media creation, especially in the realm of photography and 
-              cinematography. As someone deeply confident in their abilities 
-              and fueled by a profound passion for computer science, I'm always on the lookout 
-              for opportunities to learn and grow. Navigating the ever-evolving tech landscape,
-               I understand the importance of staying ahead of the curve. 
-            </p>
+        </div>
+        <div class="skills-section">
+          <h2 class="skills-section-title">Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Programming Languages</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    alt="Python"
+                    class="skill-icon"
+                  />
+                  <span>Python</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                    alt="Java"
+                    class="skill-icon"
+                  />
+                  <span>Java</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript"
+                    class="skill-icon"
+                  />
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                    alt="TypeScript"
+                    class="skill-icon"
+                  />
+                  <span>TypeScript</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                    alt="C"
+                    class="skill-icon"
+                  />
+                  <span>C</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                    alt="C#"
+                    class="skill-icon"
+                  />
+                  <span>C#</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Frontend</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React"
+                    class="skill-icon"
+                  />
+                  <span>React.js</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    alt="HTML"
+                    class="skill-icon"
+                  />
+                  <span>HTML</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                    alt="CSS"
+                    class="skill-icon"
+                  />
+                  <span>CSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category backend-tools">
+              <h3>Developer Tools</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                    alt="Git"
+                    class="skill-icon"
+                  />
+                  <span>Git</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                    alt="GitHub"
+                    class="skill-icon"
+                  />
+                  <span>GitHub</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+                    alt="GitLab"
+                    class="skill-icon"
+                  />
+                  <span>GitLab</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                    alt="Postman"
+                    class="skill-icon"
+                  />
+                  <span>Postman</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                    alt="VS Code"
+                    class="skill-icon"
+                  />
+                  <span>Visual Studio Code</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+                    alt="Unity"
+                    class="skill-icon"
+                  />
+                  <span>Unity</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+                    alt="IntelliJ"
+                    class="skill-icon"
+                  />
+                  <span>IntelliJ</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+                    alt="PyCharm"
+                    class="skill-icon"
+                  />
+                  <span>PyCharm</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
+                    alt="Eclipse"
+                    class="skill-icon"
+                  />
+                  <span>Eclipse</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Backend & Frameworks</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                    alt="Node.js"
+                    class="skill-icon"
+                  />
+                  <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+                    alt="Flask"
+                    class="skill-icon"
+                  />
+                  <span>Flask</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                    alt="SQL"
+                    class="skill-icon"
+                  />
+                  <span>SQL</span>
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                    alt="PyTorch"
+                    class="skill-icon"
+                  />
+                  <span>PyTorch</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="experience">
+    <section id="experience" class="fade-in">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
+        <div class="work-experience">
+          <div class="work-item">
+            <div class="work-header">
+              <div class="work-company-info">
+                <div class="work-logo-container">
+                  <img
+                    src="./assets/Logos/candescentt-logo.png"
+                    alt="Candescent Logo"
+                    class="work-logo"
+                    onerror="this.style.display='none'"
+                  />
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
                 <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
+                  <h2 class="work-title">Software Developer Intern</h2>
+                  <p class="work-company">Candescent — Waterloo, ON</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flask</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+              </div>
+              <span class="work-date">May 2025 - Dec 2025</span>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experience</p>
+            <button
+              class="expand-btn work-expand"
+              onclick="toggleExpand('candescent-details')"
+            >
+              <span>View Details</span>
+              <span class="expand-icon">+</span>
+            </button>
+            <div
+              id="candescent-details"
+              class="expandable-content work-details"
+            >
+              <ul>
+                <li>
+                  Designed and built responsive UI components for wire payment
+                  feature using React.js, TypeScript, and MUI, enabling clients
+                  to upload text files and map 20+ field types to database
+                  schemas, deployed to 100+ companies
+                </li>
+                <li>
+                  Reduced API response time by 15% through implementing file
+                  processing optimizations in Java using Spring Boot, improving
+                  user experience for 500+ concurrent users during peak file
+                  upload periods
+                </li>
+                <li>
+                  Streamlined feature delivery by collaborating with Product
+                  Owners and UX/UI designers to validate designs
+                  pre-development, reducing rework iterations by 25% and
+                  accelerating team output
+                </li>
+                <li>
+                  Enhanced reliability through unit/integration tests using
+                  Jest, achieving 90% coverage and reducing bugs by 30%
+                </li>
+              </ul>
+              <div class="job-skills">
+                <h4>Technical Skills:</h4>
+                <div class="skills-tags">
+                  <span class="skill-tag">React.js</span>
+                  <span class="skill-tag">TypeScript</span>
+                  <span class="skill-tag">Material-UI</span>
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">Spring Boot</span>
+                  <span class="skill-tag">Jest</span>
+                  <span class="skill-tag">Git</span>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Experience</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C#</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/Logos/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="projects">
+    <section id="projects" class="fade-in">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers project-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/FireGuardAI/Logo.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">FireGuard AI</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/fireguard-ai','_blank')"
+      <div class="projects-container">
+        <div class="project-item">
+          <div class="project-header">
+            <h2 class="project-title-minimal">FireGuard AI</h2>
+            <span class="project-tech">Python, PyTorch, Flask, React.js</span>
+          </div>
+          <button
+            class="expand-btn project-expand"
+            onclick="toggleExpand('fireguard-details')"
+          >
+            <span>View Details</span>
+            <span class="expand-icon">+</span>
+          </button>
+          <div
+            id="fireguard-details"
+            class="expandable-content project-details"
+          >
+            <ul>
+              <li>
+                Trained a PyTorch-based neural network model to predict forest
+                fires, achieving 93% accuracy on test data
+              </li>
+              <li>
+                Constructed a frontend using React and Mapbox API, enabling
+                geolocation search and map navigation
+              </li>
+              <li>
+                Integrated the OpenWeather API to collect up-to-date weather
+                data, improving prediction precision by 15%
+              </li>
+              <li>
+                Implemented a Flask backend to seamlessly connect the machine
+                learning model with the React frontend
+              </li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/aarib-sami/fireguard-ai"
+                target="_blank"
+                class="project-link"
+                >GitHub</a
               >
-                Github
-              </button>
               <button
-                class="btn btn-color-2 project-btn open-modal"
+                class="project-link-btn open-modal"
                 data-video="./assets/FireGuardAI/fireguard-ai.mp4"
               >
                 Video Demo
               </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text="• Trained a PyTorch-based neural network model to predict forest fires, achieving 93% accuracy on test data
-              • Constructed a front-end using React and Mapbox API, enabling geolocation search and map navigation
-              • Integrated with OpenWeather API to collect up-to-date weather data, improving prediction precision by 15%
-              • Implemented a Flask backend to seamlessly connect the machine learning model with the React front-end"
-              >Details
-              </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Gryph-Course-Watch/gryph-course-watch.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">GryphCourseWatch</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/gryph-course-watch','_blank')"
+        </div>
+        <div class="project-item">
+          <div class="project-header">
+            <h2 class="project-title-minimal">GryphCourseWatch</h2>
+            <span class="project-tech"
+              >Python, Flask, Playwright, HTML/CSS, JavaScript</span
+            >
+          </div>
+          <button
+            class="expand-btn project-expand"
+            onclick="toggleExpand('gryph-details')"
+          >
+            <span>View Details</span>
+            <span class="expand-icon">+</span>
+          </button>
+          <div id="gryph-details" class="expandable-content project-details">
+            <ul>
+              <li>
+                Developed a web scraping tool using Python and Playwright to
+                monitor university course availability in real-time, reducing
+                manual registration time by more than 32% across 100+ courses
+              </li>
+              <li>
+                Integrated frontend using HTML, JavaScript and Flask to allow
+                users to register for alerts and view courses
+              </li>
+              <li>
+                Marketed project on platforms like LinkedIn and Reddit,
+                generating interest from 1,500+ students pre-launch
+              </li>
+              <li>
+                Implemented email notifications using SMTP and Mailgun to alert
+                students of available course spots
+              </li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/aarib-sami/gryph-course-watch"
+                target="_blank"
+                class="project-link"
+                >GitHub</a
               >
-                Github
-              </button>
               <button
-                class="btn btn-color-2 project-btn open-modal"
+                class="project-link-btn open-modal"
                 data-video="./assets/Gryph-Course-Watch/gryph-course-watch.mp4"
               >
                 Video Demo
               </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text="• Developed a web scraping tool using Python and Selenium to monitor university course availability in real-time, reducing student time spent on course selection by ≈25%
-              • Created a frontend with HTML/CSS, JS and Flask to allow users to register for notifications and view course sections
-              • Implemented email notifications using SMTP and Mailgun to alert students when course spots become available
-              • Generated interest for the platform from 1,000+ students pre-launch, highlighting its potential impact within the community"
-              >Details
-              </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/AI-FaceID-Attendance-System/AI-FaceID-Attendance-System.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">AI FaceID Attendance System</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/AI-FaceID-Attendance-System','_blank')"
+        </div>
+        <div class="project-item">
+          <div class="project-header">
+            <h2 class="project-title-minimal">FaceID Attendance System</h2>
+            <span class="project-tech">Python, OpenCV, Firebase</span>
+          </div>
+          <button
+            class="expand-btn project-expand"
+            onclick="toggleExpand('faceid-details')"
+          >
+            <span>View Details</span>
+            <span class="expand-icon">+</span>
+          </button>
+          <div id="faceid-details" class="expandable-content project-details">
+            <ul>
+              <li>
+                Designed an attendance system using Python and OpenCV, achieving
+                a facial recognition accuracy of 95%
+              </li>
+              <li>
+                Deployed automated attendance logging by detecting faces within
+                1.75s and updating the database accordingly
+              </li>
+              <li>
+                Leveraged Firebase to dynamically update student attendance
+                data, ensuring accurate records for future use
+              </li>
+              <li>
+                Built a frontend interface using OpenCV's graphical system to
+                display student data such as name and major
+              </li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/aarib-sami/AI-FaceID-Attendance-System"
+                target="_blank"
+                class="project-link"
+                >GitHub</a
               >
-                Github
-              </button>
               <button
-                class="btn btn-color-2 project-btn open-modal"
+                class="project-link-btn open-modal"
                 data-video="./assets/AI-FaceID-Attendance-System/AI-FaceID-Attendance-System.mp4"
               >
                 Video Demo
               </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text="• Developed an AI-powered face recognition attendance system using Python and OpenCV, achieving an accuracy of 95% in attendance logging
-              • Implemented automated attendance logging by detecting faces within 1.75s and updating database with each recognized student
-              • Integrated with Firebase for real-time database management and cloud storage of student attendance data
-              • Designed an interface displaying student information such as name, major, year, total attendance and ID"
-              >Details
-              </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Contact-List-Organizer/contact-list-organizer.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Contact List Organizer</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/contact-list-organizer','_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn open-modal"
-                data-video="./assets/Contact-List-Organizer/contact-list-organizer.mp4"
-              >
-                Video Demo
-              </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text="• Designed and developed a Contact Management System to facilitate CRUD operations on contact data
-              • Utilized HTTP methods to perform corresponding CRUD actions on contact resources
-              • Implemented email functionality to send bulk emails to selected contacts directly from the app decreasing time required to send bulk emails by 23%
-              • Used SQLAlchemy ORM for efficient data management with a PostgreSQL database"
-              >Details
-              </button>
-            </div>
+        </div>
+        <div class="project-item">
+          <div class="project-header">
+            <h2 class="project-title-minimal">Sign Language Translator</h2>
+            <span class="project-tech">Python, OpenCV, TensorFlow</span>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Zoo-Animal-Classifier/zoo-animal.jpg"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Zoo Animal Classifier (ML)</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/zoo-animal-classifier-using-ML','_blank')"
+          <button
+            class="expand-btn project-expand"
+            onclick="toggleExpand('signlang-details')"
+          >
+            <span>View Details</span>
+            <span class="expand-icon">+</span>
+          </button>
+          <div id="signlang-details" class="expandable-content project-details">
+            <ul>
+              <li>
+                Built a live sign language recognition system using TensorFlow,
+                achieving 92% accuracy across 26 gestures
+              </li>
+              <li>
+                Utilized OpenCV for efficient video capture and processing,
+                enabling detection within ≈1.53s latency/frame
+              </li>
+              <li>
+                Fine-tuned a SSD MobileNet model, boosting recognition
+                performance by over 25%
+              </li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/aarib-sami"
+                target="_blank"
+                class="project-link"
+                >GitHub</a
               >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn open-modal"
-                data-video="./assets/Zoo-Animal-Classifier/Zoo-Animal-Classifier.mp4"
-              >
-                Video Demo
-              </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text="• Utilized a Zoo Dataset sample consisting of 100 animals, each with 10 attributes and a class label
-              • Implemented a k-nearest neighbours (k-NN) algorithm to predict the class label of a new given animal
-              • Performed calculations using Euclidean Distance, Hamming Distance, and Jaccard Similarity formulas
-              • Achieved a final accuracy of 80% on the test set of 20 animals"
-              >Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Carbase/carbase.jpg"
-                alt="Carbase"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">CarBase</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/carBase','_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn open-modal"
-                data-video="./assets/Carbase/CarBase.mp4"
-              >
-                Video Demo
-              </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text=" • Developed a dynamically linked list implementation in C programming for car data management
-              • Implemented essential operations including adding, editing, and removing car information
-              • Utilized user-defined structures and pointers to facilitate manipulation and traversal of car records
-              • Demonstrated an understanding of memory management, data structuring, and algorithmic optimizations"
-              >Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets//Alpine-Escape/alpine-escape.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Alpine Escape</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/alpine-escape','_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn open-modal"
-                data-video="./assets//Alpine-Escape/Alpine-Escape.mp4"
-              >
-                Video Demo
-              </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text="• Conceptualized and developed 'Alpine Escape' an engaging endless runner mobile game using Unity and C#.
-              • Designed and created all in-game graphics independently using Photoshop, including the skiing penguin character, obstacles, and environmental elements
-              • Implemented core gameplay mechanics such as obstacle avoidance, scoring systems, and dynamic level progression.
-              • Overcame design challenges to ensure a visually cohesive and aesthetically pleasing game environment that enhances the player experience"
-              >Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets//Humanitarian-Aid-Service/humanitarian-aid-service.jpeg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Humanitarian Aid Service</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/humanitarian-aid-service','_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn open-modal"
-                data-video="./assets//Humanitarian-Aid-Service/Humanitarian Aid Service.mp4"
-              >
-                Video Demo
-              </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text="• Collaborated on a Java-based aid system software as a key member of a project team which simulated a platform where citizens could submit loan requests to the government
-              • Implemented a user-friendly interface using Java's Swing library, allowing for efficient review and management of loan requests in a simulated government setting
-              • Utilized object serialization for data storage, creating a Application class to store and manage individual loan applications
-              • Contributed to features such as application filtering, status updates, and dynamic list rendering to enhance the functionality and user experience of the simulated aid system"
-              >Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets//Lazer-Defender/lazer-defender.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Lazer Defender</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/lazer-defender','_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn open-modal"
-                data-video="./assets//Lazer-Defender/Lazer Defender.mp4"
-              >
-                Video Demo
-              </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text=" • A 2-D mobile game developed on Unity using C# 
-                          • User plays as a spaceship, must avoid enemies while also eliminating them from the game
-                          • Objective is to get as high of a score as possible."
-              >Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Glitch-Garden/glitch-garden.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Glitch Garden</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/glitch-garden','_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn open-modal"
-                data-video="./assets/Glitch-Garden/Glitch Garden.mp4"
-              >
-                Video Demo
-              </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text=" • A 2-D Plants vs Zombies remake in Unity using C#
-                          • Player must strategically place defenders on grid to eliminate enemies that spawn, increasing in speed over time
-                          • User must keep track of currency which decreases according to defender placed"
-              >Details
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Catch-The-Icicle/catch-the-icicle.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Catch The Icicle</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/aarib-sami/catch-the-icicle','_blank')"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn open-modal"
-                data-video="./assets/Catch-The-Icicle/Catch The Icicle.mp4"
-              >
-                Video Demo
-              </button>
-              <button class="btn btn-color-2 project-btn details" 
-              data-text=" • A 2-D mobile game developed on Unity using C# 
-                          • Icicles fall from a roof and must be caught by the player
-                          • Icicles caught is the player's score, the goal is to maximize"
-              >Details
-              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="fade-in">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
@@ -659,7 +610,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:asami01@uoguelph.ca">asami01@uoguelph.ca</a></p>
+          <p><a href="mailto:aaribsamii@gmail.com">aaribsamii@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -667,7 +618,11 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a target=”_blank” href="https://www.linkedin.com/in/aarib-sami/">LinkedIn</a></p>
+          <p>
+            <a target="”_blank”" href="https://www.linkedin.com/in/aarib-sami/"
+              >LinkedIn</a
+            >
+          </p>
         </div>
       </div>
     </section>
@@ -677,34 +632,21 @@
     <script src="script.js"></script>
     <div id="videoModal" class="modal">
       <div class="modal-content">
-          <span class="close">&times;</span>
-          <video id="videoPlayer" controls>
-              <source src="" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
+        <span class="close">&times;</span>
+        <video id="videoPlayer" controls>
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
-  </div>
-  <div id="textModal" class="text-modal">
-    <div class="text-modal-content">
-      <span class="text-close">&times;</span>
-      <div id="textContent"></div>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.7.1.js"> </script>
-  <script>
-    $(window).scroll(function(){
-      if($(window).scrollTop()){
-        $("nav").addClass("black");
-        $('#particles-js').addClass('hidden');
-      }
-      else{
-        $("nav").removeClass("black");
-        $('#particles-js').removeClass('hidden');
-        
-      }
-    });
-  </script>
-  <script type="text/javascript" src="particles.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+    <div id="textModal" class="text-modal">
+      <div class="text-modal-content">
+        <span class="text-close">&times;</span>
+        <div id="textContent"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>

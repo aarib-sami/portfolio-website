@@ -6,6 +6,26 @@ function toggleMenu()
     icon.classList.toggle("open");
 }
 
+function toggleExpand(id) {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const button = event.target.closest('.expand-btn');
+    if (!button) return;
+
+    const icon = button.querySelector('.expand-icon');
+
+    if (element.style.display === 'block' || element.classList.contains('expanded')) {
+        element.style.display = 'none';
+        element.classList.remove('expanded');
+        if (icon) icon.textContent = '+';
+    } else {
+        element.style.display = 'block';
+        element.classList.add('expanded');
+        if (icon) icon.textContent = '−';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
   // Video modal functionality
   var videoModal = document.getElementById("videoModal");
@@ -59,4 +79,73 @@ document.addEventListener('DOMContentLoaded', (event) => {
       textModal.style.display = "none";
     }
   }
+
+  // Scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections with fade-in class
+  document.querySelectorAll('.fade-in').forEach(section => {
+    observer.observe(section);
+  });
+
+  // Side navigation active state
+  const sections = document.querySelectorAll('section[id]');
+  const navDots = document.querySelectorAll('.nav-dot');
+
+  function updateActiveNav() {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navDots.forEach(dot => {
+      dot.classList.remove('active');
+      if (dot.getAttribute('data-section') === current) {
+        dot.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+  updateActiveNav();
+
+  // Smooth scroll for navigation
+  navDots.forEach(dot => {
+    dot.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('data-section');
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 });
+
+// Handle logo error with fallback
+function handleLogoError(img) {
+  img.onerror = null;
+  img.src = 'https://logos-world.net/wp-content/uploads/2021/02/University-of-Guelph-Logo.png';
+  img.onerror = function() {
+    this.style.display = 'none';
+    const fallback = document.createElement('div');
+    fallback.className = 'logo-fallback';
+    fallback.textContent = 'UofG';
+    this.parentElement.appendChild(fallback);
+  };
+}
