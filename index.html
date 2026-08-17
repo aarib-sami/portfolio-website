@@ -70,6 +70,42 @@
           <summary class="summary">
             <span class="exp-main">
               <img
+                src="./assets/Logos/amdocs-logo.png"
+                alt="Amdocs"
+                class="exp-logo"
+              />
+              <span>
+                <span class="strong">AI Developer Intern</span>
+                <span class="muted exp-company">Amdocs • Mississauga, ON</span>
+              </span>
+            </span>
+            <span class="muted">May 2026 – Present</span>
+          </summary>
+          <ul class="bullets">
+            <li>
+              Reduced repository re-indexing cost by building a FAISS backed
+              diffing pipeline that embeds file contents and compares vectors
+              between codebase versions to reindex only changed files, reducing
+              index time from 30 to 5 min
+            </li>
+            <li>
+              Cut release defect investigation time by building a Cursor agent
+              that pulls Jira context through MCP and cross checks against
+              source code to generate code verified solution writeups, adopted
+              by a 50+ member operations team
+            </li>
+            <li>
+              Caught documentation drift across 50 API endpoints by building an
+              agent that validates Swagger field types and required attributes
+              against source code, replacing manual review for a 20+ member API
+              team
+            </li>
+          </ul>
+        </details>
+        <details class="item">
+          <summary class="summary">
+            <span class="exp-main">
+              <img
                 src="./assets/Logos/candescentt-logo.png"
                 alt="Candescent"
                 class="exp-logo"
@@ -109,6 +145,44 @@
 
       <section class="block" id="projects">
         <h2>projects (click to expand)</h2>
+
+        <details class="item">
+          <summary class="summary">
+            <span class="strong">Embercast</span>
+            <span class="muted">Python, XGBoost, React.js, AWS</span>
+          </summary>
+          <ul class="bullets">
+            <li>
+              Predicted new Canada fire hotspots the next day through XGBoost
+              trained on ERA5 weather and NASA FIRMS, reaching 12% higher PR
+              AUC than the persistence baseline
+            </li>
+            <li>
+              Deployed live scoring for any of 8,805 Canada land cells through
+              ONNX on AWS Lambda behind API Gateway with artifacts stored in
+              S3, resulting in p95 latency of 665 ms
+            </li>
+            <li>
+              Built a public Canada risk map through React and Leaflet with
+              live FIRMS hotspots and Lambda scoring, resulting in click scores
+              for any of 8,805 land cells with probability plus main factors
+            </li>
+          </ul>
+          <div class="actions">
+            <a
+              class="action"
+              href="https://github.com/aarib-sami/embercast"
+              target="_blank"
+              >github</a
+            >
+            <a
+              class="action"
+              href="https://aarib-sami.github.io/embercast/"
+              target="_blank"
+              >live demo</a
+            >
+          </div>
+        </details>
 
         <details class="item">
           <summary class="summary">
