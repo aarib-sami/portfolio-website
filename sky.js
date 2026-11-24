@@ -14,6 +14,10 @@
   const MAX_TRAIL = (14 * Math.PI) / 180; // trails grow to 14°
   const TRAIL_SEGMENTS = 6;
 
+  // Snow fades toward snowTarget (1 = snowing, 0 = clear). Set by the
+  // live Mississauga weather in simple.js; defaults to snowing.
+  let snowLevel = 1, snowTarget = 1;
+
   let w = 0, h = 0, dpr = 1, pole = { x: 0, y: 0 }, maxR = 0;
   let stars = [], flakes = [];
 
@@ -111,6 +115,9 @@
 
   function drawSnow(t, dt) {
     nctx.clearRect(0, 0, w, h);
+    snowLevel += (snowTarget - snowLevel) * Math.min(1, dt * 0.8);
+    if (dt === 0) snowLevel = snowTarget; // reduced motion: jump straight there
+    if (snowLevel < 0.01) return;
     for (let i = 0; i < flakes.length; i++) {
       const f = flakes[i];
       f.y += f.vy * dt;
@@ -119,7 +126,7 @@
         flakes[i] = newFlake(false);
         continue;
       }
-      nctx.fillStyle = `rgba(245, 248, 245, ${f.alpha})`;
+      nctx.fillStyle = `rgba(245, 248, 245, ${f.alpha * snowLevel})`;
       nctx.beginPath();
       nctx.arc(x, f.y, f.r, 0, Math.PI * 2);
       nctx.fill();
@@ -165,6 +172,13 @@
     }, 150);
   });
   reduce.addEventListener?.("change", run);
+
+  window.sky = {
+    setSnow(on) {
+      snowTarget = on ? 1 : 0;
+      if (reduce.matches) drawSnow(0, 0);
+    },
+  };
 
   run();
 })();

@@ -263,3 +263,85 @@ document.addEventListener("DOMContentLoaded", () => {
   render(false);
   btn.addEventListener("click", () => render(list.hidden));
 });
+
+/* fade sections in as they scroll into view */
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!("IntersectionObserver" in window)) return;
+  const targets = document.querySelectorAll(".hero, .block, .footer");
+  const io = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        io.unobserve(e.target);
+      }),
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
+  );
+  targets.forEach((el, i) => {
+    el.classList.add("reveal");
+    // small stagger for whatever is visible on load
+    el.style.transitionDelay = `${Math.min(i, 3) * 70}ms`;
+    io.observe(el);
+  });
+});
+
+/* live note: mississauga time + weather; snow follows real conditions */
+(() => {
+  const LAT = 43.589, LON = -79.644, TZ = "America/Toronto";
+  const el = document.getElementById("now");
+  const text = document.getElementById("now-text");
+  if (!el || !text) return;
+
+  const WEATHER = [
+    [[0], "clear"],
+    [[1, 2], "partly cloudy"],
+    [[3], "overcast"],
+    [[45, 48], "foggy"],
+    [[51, 53, 55, 56, 57], "drizzle"],
+    [[61, 63, 65, 66, 67, 80, 81, 82], "raining"],
+    [[71, 73, 75, 77, 85, 86], "snowing"],
+    [[95, 96, 99], "thunderstorms"],
+  ];
+  const describe = (code) =>
+    (WEATHER.find(([codes]) => codes.includes(code)) || [null, ""])[1];
+  const SNOW_CODES = [71, 73, 75, 77, 85, 86];
+
+  const clock = () =>
+    new Intl.DateTimeFormat("en-CA", {
+      hour: "numeric",
+      minute: "2-digit",
+      timeZone: TZ,
+    })
+      .format(new Date())
+      .replace(/\./g, "")
+      .toLowerCase();
+
+  let weather = "";
+  const render = () => {
+    text.textContent = ["mississauga", clock(), weather].filter(Boolean).join(" · ");
+    el.classList.add("ready");
+  };
+
+  async function refresh() {
+    try {
+      const url =
+        `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}` +
+        `&current=temperature_2m,weather_code&timezone=${encodeURIComponent(TZ)}`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(res.status);
+      const { current } = await res.json();
+      const temp = Math.round(current.temperature_2m);
+      weather = `${temp === 0 ? 0 : temp}°c · ${describe(current.weather_code)}`.replace(/ · $/, "");
+      if (window.sky) window.sky.setSnow(SNOW_CODES.includes(current.weather_code));
+    } catch (_) {
+      // Offline or API down: just show the time, leave the snow as is.
+    }
+    render();
+  }
+
+  render();
+  refresh();
+  setInterval(render, 30 * 1000);
+  setInterval(refresh, 15 * 60 * 1000);
+})();
