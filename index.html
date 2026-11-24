@@ -5,10 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aarib Sami</title>
+    <meta
+      name="description"
+      content="Aarib Sami: incoming ML developer at Magnet Forensics, CS at the University of Guelph. Projects, experience, and some cinematography."
+    />
+    <link rel="canonical" href="https://www.aarib.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.aarib.dev/" />
+    <meta property="og:title" content="Aarib Sami" />
+    <meta
+      property="og:description"
+      content="incoming ml dev @ magnet • cs @ university of guelph • behind the camera"
+    />
+    <meta property="og:image" content="https://www.aarib.dev/assets/Pictures/profile-pic.png" />
+    <meta property="og:image:alt" content="Aarib Sami" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Aarib Sami" />
+    <meta
+      name="twitter:description"
+      content="incoming ml dev @ magnet • cs @ university of guelph • behind the camera"
+    />
+    <meta name="twitter:image" content="https://www.aarib.dev/assets/Pictures/profile-pic.png" />
+    <meta name="theme-color" content="#0f1115" />
     <link
       rel="icon"
       type="image/x-icon"
-      href="/assets/Pictures/profile-pic.png"
+      href="./assets/Pictures/profile-pic.png"
     />
     <link rel="stylesheet" href="simple.css" />
   </head>
@@ -27,7 +49,14 @@
     gtag("config", "G-K8F85QX330");
   </script>
   <body>
-    <div id="particles-js"></div>
+    <canvas class="sky" id="sky" aria-hidden="true"></canvas>
+    <div class="moon" aria-hidden="true"></div>
+    <svg class="scenery" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <path class="ridge-far" d="M0 215 L120 168 L210 196 L330 128 L430 178 L560 108 L690 172 L800 138 L930 188 L1050 118 L1180 168 L1300 132 L1440 176 V320 H0 Z" />
+      <path class="ridge-mid" d="M0 248 Q180 198 320 232 T640 222 T960 238 T1280 212 L1440 226 V320 H0 Z" />
+      <path class="ridge-near" d="M0 320 L0 268 L0 265 L15 221 L30 265 L26 266 L35 244 L45 266 L41 275 L55 237 L69 275 L68 269 L83 225 L97 269 L99 272 L107 230 L115 272 L111 275 L124 233 L138 275 L133 275 L142 241 L151 275 L149 268 L162 239 L175 268 L175 272 L182 246 L190 272 L187 267 L194 234 L201 267 L199 271 L212 244 L225 271 L220 269 L230 223 L241 269 L236 267 L248 244 L260 267 L260 275 L268 233 L275 275 L273 264 L285 225 L296 264 L293 267 L307 224 L320 267 L318 272 L331 247 L344 272 L343 274 L355 243 L367 274 L368 275 L381 243 L395 275 L392 274 L399 240 L407 274 L404 265 L418 228 L431 265 L430 269 L439 246 L448 269 L447 272 L457 227 L466 272 L461 275 L472 251 L483 275 L481 273 L494 248 L508 273 L507 270 L522 234 L536 270 L531 264 L544 236 L556 264 L555 262 L564 218 L573 262 L568 268 L581 238 L595 268 L588 273 L596 247 L603 273 L600 272 L607 230 L615 272 L613 270 L626 237 L639 270 L638 272 L652 244 L665 272 L659 266 L673 238 L688 266 L686 275 L699 256 L713 275 L713 263 L721 237 L728 263 L725 275 L733 251 L741 275 L742 275 L757 252 L772 275 L775 265 L789 239 L804 265 L800 275 L815 247 L829 275 L830 267 L838 235 L846 267 L844 267 L854 244 L864 267 L862 262 L875 224 L887 262 L885 263 L894 236 L904 263 L904 276 L914 254 L924 276 L918 273 L925 239 L933 273 L931 266 L940 246 L950 266 L950 265 L960 234 L971 265 L967 266 L974 233 L982 266 L981 273 L994 229 L1008 273 L1009 274 L1017 239 L1026 274 L1024 268 L1037 245 L1049 268 L1045 264 L1055 224 L1066 264 L1064 269 L1071 239 L1079 269 L1079 262 L1089 224 L1099 262 L1097 276 L1109 256 L1120 276 L1122 269 L1131 236 L1139 269 L1141 275 L1154 234 L1167 275 L1164 271 L1178 227 L1192 271 L1188 266 L1200 236 L1212 266 L1213 271 L1227 244 L1242 271 L1243 262 L1254 244 L1265 262 L1267 272 L1277 242 L1286 272 L1287 270 L1295 246 L1302 270 L1303 264 L1310 237 L1317 264 L1314 265 L1323 240 L1332 265 L1329 272 L1340 253 L1351 272 L1347 268 L1355 225 L1363 268 L1359 263 L1371 236 L1383 263 L1378 265 L1390 244 L1402 265 L1400 264 L1413 243 L1425 264 L1418 271 L1425 240 L1433 271 L1433 269 L1444 226 L1456 269 L1440 270 L1440 320 Z" />
+    </svg>
+    <canvas class="snow" id="snow" aria-hidden="true"></canvas>
     <main class="page">
       <header class="hero">
         <img
@@ -38,8 +67,9 @@
         <div class="hero-text">
           <h1 class="name">Aarib Sami</h1>
           <p class="tagline">
-            CS @ University of Guelph • full-stack • AI + SaaS
+            incoming ml dev @ magnet • cs @ university of guelph
           </p>
+          <p class="blurb">into ai/ml and building saas products.</p>
           <nav class="links">
             <a href="./assets/Resume/AaribSamiResume.pdf" target="_blank"
               >resume</a
@@ -53,19 +83,58 @@
         </div>
       </header>
 
-      <section class="block" id="about">
-        <h2>about</h2>
-        <p class="about-text">
-          I like building, learning AI and shipping SaaS products.
-        </p>
-        <p class="about-text">
-          Recently I’ve especially been focused on agentic AI especially with all the
-          new tools coming out like OpenClaw.
-        </p>
-      </section>
-
       <section class="block" id="experience">
-        <h2>experience</h2>
+        <div class="block-head">
+          <h2>experience</h2>
+          <button
+            type="button"
+            class="exp-toggle"
+            aria-expanded="false"
+            aria-controls="prev-exp"
+          >
+            <span class="exp-toggle-label">+ 4 previous</span>
+          </button>
+        </div>
+        <div class="item">
+          <div class="summary">
+            <span class="exp-main">
+              <img
+                src="./assets/Logos/magnet-logo.png"
+                alt="Magnet Forensics"
+                class="exp-logo"
+              />
+              <span>
+                <span class="strong">Machine Learning Developer Intern</span>
+                <span class="muted exp-company">Magnet Forensics • Waterloo, ON</span>
+              </span>
+            </span>
+            <span class="muted">Nov 2026 – Present</span>
+          </div>
+        </div>
+
+          <div class="prev-exp" id="prev-exp" hidden>
+        <details class="item">
+          <summary class="summary">
+            <span class="exp-main">
+              <img
+                src="./assets/Logos/mercor-logo.png"
+                alt="Mercor"
+                class="exp-logo"
+              />
+              <span>
+                <span class="strong">AI Annotation Expert</span>
+                <span class="muted exp-company">Mercor • Remote</span>
+              </span>
+            </span>
+            <span class="muted">Aug 2026 – Oct 2026</span>
+          </summary>
+          <ul class="bullets">
+            <li>
+              Ranked and annotated outputs to improve reasoning and code quality
+              in major AI models
+            </li>
+          </ul>
+        </details>
         <details class="item">
           <summary class="summary">
             <span class="exp-main">
@@ -79,7 +148,7 @@
                 <span class="muted exp-company">Amdocs • Mississauga, ON</span>
               </span>
             </span>
-            <span class="muted">May 2026 – Present</span>
+            <span class="muted">May 2026 – Aug 2026</span>
           </summary>
           <ul class="bullets">
             <li>
@@ -141,10 +210,33 @@
             </li>
           </ul>
         </details>
+        <details class="item">
+          <summary class="summary">
+            <span class="exp-main">
+              <img
+                src="./assets/Logos/socratica-logo.png"
+                alt="Socratica"
+                class="exp-logo"
+              />
+              <span>
+                <span class="strong">Founding Host</span>
+                <span class="muted exp-company">Socratica • Guelph, ON</span>
+              </span>
+            </span>
+            <span class="muted">Oct 2024 – Apr 2025</span>
+          </summary>
+          <ul class="bullets">
+            <li>
+              Started coworking sessions at the University of Guelph, bringing
+              together ambitious students to build their projects side by side
+            </li>
+          </ul>
+        </details>
+          </div>
       </section>
 
       <section class="block" id="projects">
-        <h2>projects (click to expand)</h2>
+        <h2>projects</h2>
 
         <details class="item">
           <summary class="summary">
@@ -212,7 +304,7 @@
           <div class="actions">
             <a
               class="action"
-              href="furnish-ai.com"
+              href="https://furnish-ai.com"
               target="_blank"
               >link</a
             >
@@ -261,6 +353,13 @@
             <a class="action" href="?demo=policycompass">video demo</a>
           </div>
         </details>
+
+        <details class="older">
+          <summary class="older-summary">
+            <span>older projects</span>
+            <span class="muted older-count">5</span>
+          </summary>
+          <div class="older-list">
 
         <details class="item">
           <summary class="summary">
@@ -330,10 +429,6 @@
             <a class="action" href="?demo=gryph">video demo</a>
           </div>
         </details>
-      </section>
-
-      <section class="block" id="old-projects">
-        <h2>very old projects</h2>
 
         <details class="item">
           <summary class="summary">
@@ -369,127 +464,9 @@
           </div>
         </details>
 
-        <details class="item">
-          <summary class="summary">
-            <span class="strong">Sign Language Translator</span>
-            <span class="muted">Python, OpenCV, TensorFlow</span>
-          </summary>
-          <ul class="bullets">
-            <li>
-              Built a live sign language recognition system using TensorFlow,
-              achieving 92% accuracy across 26 gestures
-            </li>
-            <li>
-              Utilized OpenCV for efficient video capture and processing,
-              enabling detection within ~1.53s latency/frame
-            </li>
-            <li>
-              Fine-tuned an SSD MobileNet model, boosting recognition
-              performance by over 25%
-            </li>
-          </ul>
-          <div class="actions">
-            <a class="action" href="https://github.com/aarib-sami" target="_blank"
-              >github</a
-            >
-          </div>
-        </details>
 
-        <details class="item">
-          <summary class="summary">
-            <span class="strong">Contact List Organizer</span>
-            <span class="muted">Python, Flask, PostgreSQL, HTML/CSS</span>
-          </summary>
-          <ul class="bullets">
-            <li>
-              Designed and developed a contact management system to facilitate
-              CRUD operations on contact data
-            </li>
-            <li>
-              Utilized HTTP methods to perform corresponding CRUD actions on
-              contact resources
-            </li>
-            <li>
-              Implemented email functionality to send bulk emails to selected
-              contacts directly from the app, decreasing time required to send
-              bulk emails by 23%
-            </li>
-            <li>
-              Used SQLAlchemy ORM for efficient data management with a
-              PostgreSQL database
-            </li>
-          </ul>
-          <div class="actions">
-            <a
-              class="action"
-              href="https://github.com/aarib-sami/contact-list-organizer"
-              target="_blank"
-              >github</a
-            >
-            <a class="action" href="?demo=contactlist">video demo</a>
-          </div>
-        </details>
 
-        <details class="item">
-          <summary class="summary">
-            <span class="strong">Zoo Animal Classifier (ML)</span>
-            <span class="muted">Python, Machine Learning</span>
-          </summary>
-          <ul class="bullets">
-            <li>
-              Built with a zoo dataset of 100 animals, each with 10 attributes
-              and a class label
-            </li>
-            <li>
-              Implemented a k-nearest neighbors (k-NN) model to predict class
-              labels for new animals
-            </li>
-            <li>
-              Used Euclidean distance, Hamming distance, and Jaccard similarity
-              for evaluation
-            </li>
-            <li>Achieved 70% accuracy on a 20-animal test set</li>
-          </ul>
-          <div class="actions">
-            <a
-              class="action"
-              href="https://github.com/aarib-sami/zoo-animal-classifier-using-ML"
-              target="_blank"
-              >github</a
-            >
-            <a class="action" href="?demo=zoo">video demo</a>
-          </div>
-        </details>
 
-        <details class="item">
-          <summary class="summary">
-            <span class="strong">CarBase</span>
-            <span class="muted">C</span>
-          </summary>
-          <ul class="bullets">
-            <li>
-              Developed a dynamically linked list implementation in C for car
-              data management
-            </li>
-            <li>
-              Implemented core operations including adding, editing, and
-              removing car information
-            </li>
-            <li>
-              Used user-defined structures and pointers to enable efficient
-              record manipulation and traversal
-            </li>
-            <li>
-              Demonstrated strong memory management and data-structure design
-            </li>
-          </ul>
-          <div class="actions">
-            <a class="action" href="https://github.com/aarib-sami/carBase" target="_blank"
-              >github</a
-            >
-            <a class="action" href="?demo=carbase">video demo</a>
-          </div>
-        </details>
 
         <details class="item">
           <summary class="summary">
@@ -551,78 +528,48 @@
           </div>
         </details>
 
-        <details class="item">
-          <summary class="summary">
-            <span class="strong">Lazer Defender</span>
-            <span class="muted">Unity, C#</span>
-          </summary>
-          <ul class="bullets">
-            <li>A 2D mobile game developed in Unity using C#</li>
-            <li>
-              Player controls a spaceship and avoids/eliminates enemies
-            </li>
-            <li>Goal is to maximize score</li>
-          </ul>
-          <div class="actions">
-            <a
-              class="action"
-              href="https://github.com/aarib-sami/lazer-defender"
-              target="_blank"
-              >github</a
-            >
-            <a class="action" href="?demo=lazer">video demo</a>
-          </div>
-        </details>
 
-        <details class="item">
-          <summary class="summary">
-            <span class="strong">Glitch Garden</span>
-            <span class="muted">Unity, C#</span>
-          </summary>
-          <ul class="bullets">
-            <li>A 2D Plants vs Zombies-inspired game built in Unity with C#</li>
-            <li>
-              Place defenders strategically to stop enemies that increase in
-              speed over time
-            </li>
-            <li>
-              Resource management mechanics tied to defender placement costs
-            </li>
-          </ul>
-          <div class="actions">
-            <a class="action" href="https://github.com/aarib-sami/glitch-garden" target="_blank"
-              >github</a
-            >
-            <a class="action" href="?demo=glitch">video demo</a>
-          </div>
-        </details>
 
-        <details class="item">
-          <summary class="summary">
-            <span class="strong">Catch The Icicle</span>
-            <span class="muted">Unity, C#</span>
-          </summary>
-          <ul class="bullets">
-            <li>A 2D mobile game developed in Unity using C#</li>
-            <li>Catch falling icicles to increase score</li>
-            <li>Primary objective is score maximization</li>
-          </ul>
-          <div class="actions">
-            <a
-              class="action"
-              href="https://github.com/aarib-sami/catch-the-icicle"
-              target="_blank"
-              >github</a
-            >
-            <a class="action" href="?demo=icicle">video demo</a>
           </div>
         </details>
       </section>
 
+      <section class="block" id="film">
+        <h2>behind the camera</h2>
+        <p class="about-text muted">
+          a hobby. mostly nature.
+        </p>
+
+        <div class="film-group" id="reels-group">
+          <h3 class="sub">reels</h3>
+          <div class="reels" id="reels"></div>
+        </div>
+
+        <div class="film-group" id="videos-group">
+          <h3 class="sub">videos</h3>
+          <div class="videos" id="videos"></div>
+        </div>
+
+        <div class="film-group" id="photos-group">
+          <h3 class="sub">pictures</h3>
+          <div class="photos" id="photos"></div>
+        </div>
+      </section>
+
       <footer class="footer">
         <span class="muted">© 2026 Aarib Sami</span>
+        <span class="footer-quote">choose your regrets or have them chosen for you.</span>
       </footer>
     </main>
+
+    <div id="photoModal" class="modal" aria-hidden="true">
+      <div class="modal-card photo-card" role="dialog" aria-modal="true">
+        <button id="photoClose" class="modal-close" aria-label="Close">
+          close
+        </button>
+        <img id="photoFull" class="photo-full" alt="" />
+      </div>
+    </div>
 
     <div id="videoModal" class="modal" aria-hidden="true">
       <div class="modal-card" role="dialog" aria-modal="true">
@@ -637,7 +584,6 @@
     </div>
 
     <script src="simple.js"></script>
-    <script type="text/javascript" src="particles.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script src="sky.js"></script>
   </body>
 </html>

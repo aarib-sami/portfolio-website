@@ -6,9 +6,9 @@
   --text: #e7e7e7;
   --muted: rgba(231, 231, 231, 0.65);
   --border: rgba(231, 231, 231, 0.12);
-  --link: rgba(180, 211, 255, 0.9);
+  --link: rgba(196, 226, 205, 0.9);
   --linkHover: #ffffff;
-  --accent: #5ea1ff;
+  --accent: #7fb894;
   --max: 900px;
 }
 
@@ -45,10 +45,6 @@ a:hover {
   max-width: var(--max);
   margin: 0 auto;
   padding: 64px 20px 48px;
-  background: var(--bg);
-  border-radius: 16px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03),
-    0 22px 60px rgba(0, 0, 0, 0.75);
 }
 
 .hero {
@@ -62,9 +58,8 @@ a:hover {
 .avatar {
   width: 64px;
   height: 64px;
-  border-radius: 14px;
+  border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--border);
 }
 
 .hero-text {
@@ -84,7 +79,7 @@ a:hover {
 }
 
 .tagline {
-  margin: 8px 0 10px;
+  margin: 8px 0 6px;
   color: var(--muted);
   font-size: 14px;
 }
@@ -97,7 +92,7 @@ a:hover {
 }
 
 .blurb {
-  margin: 10px 0 0;
+  margin: -4px 0 10px;
   color: var(--muted);
   font-size: 14px;
   max-width: 70ch;
@@ -227,10 +222,10 @@ details.item .bullets {
 
 .action {
   font-size: 14px;
-  border: 1px solid rgba(94, 161, 255, 0.5);
+  border: 1px solid rgba(127, 184, 148, 0.5);
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(94, 161, 255, 0.08);
+  background: rgba(127, 184, 148, 0.08);
 }
 
 /* Text-first look: subtle separators */
@@ -241,13 +236,13 @@ details.item .bullets {
 
 /* Make demo look like a button */
 .action[href^="?demo="] {
-  background: rgba(94, 161, 255, 0.16);
-  border-color: rgba(94, 161, 255, 0.7);
+  background: rgba(127, 184, 148, 0.16);
+  border-color: rgba(127, 184, 148, 0.7);
 }
 
 .action[href^="?demo="]:hover {
-  background: rgba(94, 161, 255, 0.25);
-  border-color: rgba(94, 161, 255, 0.9);
+  background: rgba(127, 184, 148, 0.25);
+  border-color: rgba(127, 184, 148, 0.9);
   text-decoration: none;
 }
 
@@ -258,15 +253,29 @@ details.item .bullets {
   font-size: 14px;
 }
 
-/* particles background */
-#particles-js {
+/* nature background: quiet ridgelines + treeline pinned to the bottom */
+.scenery {
   position: fixed;
-  inset: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  background: transparent;
+  height: 34vh;
+  min-height: 180px;
   z-index: -1;
   pointer-events: none;
+}
+
+.ridge-far {
+  fill: #141a1c;
+}
+
+.ridge-mid {
+  fill: #121816;
+}
+
+.ridge-near {
+  fill: #0c110f;
 }
 
 .modal {
@@ -324,3 +333,298 @@ details.item .bullets {
   }
 }
 
+
+div.item > .summary {
+  padding: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* older projects dropdown */
+.older {
+  margin-top: 4px;
+}
+
+.older-summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.older-summary::-webkit-details-marker {
+  display: none;
+}
+
+.older-summary::before {
+  content: "+";
+  display: inline-block;
+  width: 12px;
+  color: var(--accent);
+}
+
+.older[open] > .older-summary::before {
+  content: "−";
+}
+
+.older-summary:hover {
+  color: var(--text);
+}
+
+.older-count {
+  font-size: 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0 7px;
+}
+
+.older-list {
+  margin-top: 8px;
+  padding-left: 14px;
+  border-left: 1px solid var(--border);
+}
+
+.older-list .item:not(:last-child) {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(231, 231, 231, 0.08);
+}
+/* cinematography reels */
+.reels {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.reel {
+  /* instagram's /embed/ = 4:5 video + ~208px header/footer */
+  container-type: inline-size;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0b0d11;
+}
+
+.reel iframe {
+  display: block;
+  width: 100%;
+  height: calc(125cqw + 210px);
+  border: 0;
+}
+
+/* experience header + previous-experience toggle */
+.block-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+
+.block-head h2 {
+  margin: 0;
+}
+
+.exp-toggle {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--link);
+  border: 1px solid rgba(127, 184, 148, 0.5);
+  background: rgba(127, 184, 148, 0.1);
+  border-radius: 999px;
+  padding: 6px 11px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.exp-toggle:hover,
+.exp-toggle[aria-expanded="true"] {
+  color: var(--linkHover);
+  background: rgba(127, 184, 148, 0.22);
+  border-color: rgba(127, 184, 148, 0.85);
+}
+
+.exp-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.prev-exp {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  animation: prev-in 0.2s ease-out;
+}
+
+.prev-exp .item:not(:last-child) {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(231, 231, 231, 0.08);
+}
+
+@keyframes prev-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prev-exp {
+    animation: none;
+  }
+}
+
+/* behind the camera: reels / videos / pictures */
+.film-group {
+  margin-top: 18px;
+}
+
+.sub {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.video-tile {
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0b0d11;
+}
+
+.video-tile iframe,
+.video-tile video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.photos {
+  columns: 3 200px;
+  column-gap: 12px;
+  margin-top: 12px;
+}
+
+.photo {
+  all: unset;
+  display: block;
+  margin: 0 0 12px;
+  break-inside: avoid;
+  cursor: zoom-in;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: saturate(0.92);
+}
+
+.photo:hover img {
+  transform: scale(1.02);
+  filter: none;
+}
+
+.photo:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.photo-card {
+  width: auto;
+  max-width: min(1100px, 100%);
+}
+
+.photo-full {
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+  max-height: 82vh;
+  border-radius: 10px;
+}
+
+@media (max-width: 520px) {
+  .videos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* night sky: rotating star trails, moon, snow (drawn by sky.js) */
+.sky,
+.snow {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sky {
+  z-index: -3;
+}
+
+.snow {
+  z-index: -1;
+}
+
+.moon {
+  position: fixed;
+  top: 9vh;
+  right: 11vw;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  z-index: -2;
+  pointer-events: none;
+  /* unlit side blocks the stars behind it */
+  background: var(--bg);
+  /* lit crescent + soft glow */
+  box-shadow: inset -11px 6px 0 0 #eef1e4,
+    6px -3px 38px 2px rgba(238, 241, 228, 0.14);
+}
+
+@media (max-width: 520px) {
+  .moon {
+    width: 32px;
+    height: 32px;
+    top: 5vh;
+    right: 8vw;
+    box-shadow: inset -8px 4px 0 0 #eef1e4,
+      4px -2px 28px 1px rgba(238, 241, 228, 0.14);
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+}
+
+.footer-quote {
+  color: var(--muted);
+  font-style: italic;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+}
